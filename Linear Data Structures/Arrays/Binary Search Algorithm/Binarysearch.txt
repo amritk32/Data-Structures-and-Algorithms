@@ -1,0 +1,4 @@
+Binary Search Important Observations to Check(Array)
+1) Check indexes for the array
+2) Check for the search space
+3) Check if the array is sorted
