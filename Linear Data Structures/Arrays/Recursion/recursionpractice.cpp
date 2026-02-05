@@ -3,25 +3,39 @@
 
 using namespace std;
 
-void combinations(int n , int index , vector<int> &current , vector<vector<int>> &ans , int k){
-    // int n = arr.size();
+// Changed return type to void because we are using pass-by-reference (&ans)
+void sequences(int n, int k, vector<int> &current, vector<vector<int>> &ans,int index){
     // Base Case
     if(current.size() == k){
-        ans.push_back(current); // Found a Valid answer pushback
-        return;                 // Returns to function call stack
+        ans.push_back(current);
+        return; // Now this is allowed because the function is void
     }
 
-    // Recursive Case
     for(int i = index; i <= n; i++){
-        // Fill first position
         current.push_back(i);
-        // Move to next index
-        combinations(n,index+1,current,ans,k);
+
+        sequences(n, k, current, ans,index);
+
         // Backtrack
         current.pop_back();
+    }
+}
 
+int main(){
+    vector<int> current;
+    vector<vector<int>> ans;
+    
+    // Just call it; no need to assign (ans = ...) because it's void
+    sequences(1, 3, current, ans,0);
+
+    for (const auto& row : ans) {
+        cout << "[ ";
+        for (int val : row) {
+            cout << val << " ";
+        }
+        cout << "]" << endl;
     }
 
-
-
+    cout << "Total sequences: " << ans.size() << endl;
+    return 0;
 }

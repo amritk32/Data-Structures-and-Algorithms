@@ -93,7 +93,7 @@ void getPermutation(vector<int> &arr, vector<int> &nums , int index , vector<vec
 
     // Recursive Case
     
-    for(int i = 0; i < arr.size(); i++){
+    for(int i = index; i < arr.size(); i++){
 
         // 1) Inclusion
         swap(arr[index] , arr[i]);
@@ -105,3 +105,10 @@ void getPermutation(vector<int> &arr, vector<int> &nums , int index , vector<vec
     
 
 }
+
+// use for loop when multiple parameters compete for the same place
+// Use inclusion exclusion principle without for loop when vector does not have duplicates
+// Use inclusion exclusion principle with for loop when vector contains duplicates then manual sorting is required(mergesort)
+
+// Use set to determine duplicates when sorting + skipping is too complex 
+// Use sorting and defining duplicates when using set increases space complexity

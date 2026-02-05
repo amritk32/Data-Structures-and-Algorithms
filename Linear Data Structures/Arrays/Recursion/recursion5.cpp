@@ -69,11 +69,11 @@ vector<string> findPath(vector<vector<int>> &mat)
 int main()
 {
     // Example 4x4 Grid
-    vector<vector<int>> maze = 
-    {{1, 0, 0, 0},
-     {1, 1, 0, 1},
-     {1, 1, 0, 0},
-     {0, 1, 1, 1}};
+    vector<vector<int>> maze = {
+        {1, 0, 0, 0},
+        {1, 1, 0, 1},
+        {1, 1, 0, 0},
+        {0, 1, 1, 1}};
 
     vector<string> result = findPath(maze);
 
@@ -92,5 +92,4 @@ int main()
     }
 
     return 0;
-
 }
