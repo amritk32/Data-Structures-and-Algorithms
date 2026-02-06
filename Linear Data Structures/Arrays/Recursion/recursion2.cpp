@@ -109,6 +109,9 @@ void getPermutation(vector<int> &arr, vector<int> &nums , int index , vector<vec
 // use for loop when multiple parameters compete for the same place
 // Use inclusion exclusion principle without for loop when vector does not have duplicates
 // Use inclusion exclusion principle with for loop when vector contains duplicates then manual sorting is required(mergesort)
+// To use exactly each number once in a combination question use looping method and in next recursive call for i + 1 instead of index + 1 and start
+// i from index in the for loop
 
 // Use set to determine duplicates when sorting + skipping is too complex 
+
 // Use sorting and defining duplicates when using set increases space complexity
